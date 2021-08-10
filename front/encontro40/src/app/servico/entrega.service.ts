@@ -11,10 +11,10 @@ export class EntregaService {
   constructor( private servico:HttpClient) { }
   
   listarEntregas(): Observable<any>{
-    return this.servico.get<Entrega[]>("http://localhost:8080/entregas/listar")
+    return this.servico.get<Entrega[]>("http://localhost:8085/entregas/listar")
   }
 
   incluirEntrega(entrega:Entrega): Observable<any>{
-    return this.servico.post<Entrega>("http://localhost:8080/entregas/incluir", entrega);
+    return this.servico.post<Entrega>("http://localhost:8085/entregas/incluir", entrega);
   }
 }
