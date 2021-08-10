@@ -1,0 +1,28 @@
+<div class="container">
+
+    <h1>Incluir Nova Entrega</h1>     
+    <a class="btn btn-primary" href="listarentregas" role="button"><i class="far fa-address-book"></i>&nbsp; Listar Entregas</a>
+    <form method="post" #frm="ngForm" (ngSubmit) = "incluir(frm)">
+     
+        
+        <div class="form-group">
+            <label for="codigocliente">Código do Cliente:</label>
+            <input type="text" name="codigocliente" id="codigocliente" class="form-control" placeholder="Cógido do Cliente"
+            [(ngModel)] = "entrega.codigoCliente" required>
+            &nbsp; 
+        </div>
+
+        <div class="form-group">
+            <label for="endereco">Enderecço: </label>
+            <input type="text" name="endereco" id="endereco" class="form-control" placeholder="Endereço"
+            [(ngModel)] = "entrega.endereco" required>
+            &nbsp; 
+        </div>
+
+        
+        <button type="submit" class="btn btn-primary" [disabled]="frm.invalid">
+            Incluir
+        </button>
+
+    </form>
+</div>

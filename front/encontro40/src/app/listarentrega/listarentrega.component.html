@@ -1,0 +1,27 @@
+<div class="container">
+
+    <h1>Listagem de Entregas</h1>       
+    <a class="btn btn-primary" href="incluirentrega" role="button"><i class="far fa-address-book"></i>&nbsp; Cadastrar Nova Entrega</a>
+
+    <div id="demo" class="collapse"></div>
+    <table class="table table-light table-striped">
+      <thead>
+        <tr>
+          <th>Código da Entrega</th>
+          <th>Código do Cliente</th>
+          <th>Endereço</th>
+                 
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let entregas of entrega">
+          <td>{{ entregas.codigo }}</td>
+          <td>{{ entregas.codigoCliente }}</td>
+          <td>{{ entregas.endereco }}</td>
+        
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
